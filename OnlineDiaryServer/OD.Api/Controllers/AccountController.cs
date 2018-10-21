@@ -85,7 +85,7 @@ namespace OD.Api.Controllers
                     {
                     new Claim(ClaimTypes.Name, UserDtos.Id.ToString()),
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-                        new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
+                        new Claim(JwtRegisteredClaimNames.UniqueName, user.Id),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     }),
                     Expires = DateTime.UtcNow.AddDays(7),

@@ -23,10 +23,12 @@ namespace OD.Api.Controllers
         private readonly IDiaryService _diaryService;
         private readonly IOptions<AppSettings> config;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly string UserId;
 
         public DiaryController(
           IMapper mapper
           , IDiaryService diaryService
+          , IUserService userService
           , IOptions<AppSettings> config
           , IHttpContextAccessor httpContextAccessor)
         {
@@ -34,7 +36,7 @@ namespace OD.Api.Controllers
             _diaryService = diaryService;
             this.config = config;
             _httpContextAccessor = httpContextAccessor;
-
+            this.UserId = _httpContextAccessor.HttpContext.Request.Headers["UserId"].FirstOrDefault();
 
         }
 
@@ -44,9 +46,9 @@ namespace OD.Api.Controllers
             try
             {
 
-                 var claims = _httpContextAccessor.HttpContext.User.Claims.ToList();
+                 var claims = User.FindFirst("email");
 
-                //DiaryRequest.CreatedBy = UserId;
+                DiaryRequest.CreatedBy = this.UserId;
                 var DiaryDto = _mapper.Map<Diary>(DiaryRequest);
                 var result = await _diaryService.AddDiary(DiaryDto);
                 if (result)
