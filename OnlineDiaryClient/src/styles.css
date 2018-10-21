@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.right{
+float:right;
+}
+.left{
+    float: left;
+}
+jw-modal {
+    /* modals are hidden by default */
+  
+    display: none;
+  }

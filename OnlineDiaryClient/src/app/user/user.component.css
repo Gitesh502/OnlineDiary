@@ -1,0 +1,65 @@
+:host nb-layout-header a {
+    font-size: 2rem;
+    text-decoration: none;
+  }
+  :host nb-layout-column {
+    /* height: 50vw; */
+    /* padding: 2.25rem 2.25rem .75rem !important; */
+  }
+  :host nb-layout-column:first-child {
+    background: #f4f4f7;
+  }
+
+  ::ng-deep .nb-theme-default nb-menu .menu-item .menu-icon{
+    font-size: 25px !important;
+  }
+
+  .header-container{
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+  }
+
+  .header-container.right{
+    width: 100% !important;
+  }
+
+.logo-containter{
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: calc(16rem - 1.25rem);
+  }
+  
+  .header-container .logo{
+    padding: 0 1.25rem;
+    font-size: 22px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-left: 1px solid #ebeef2;
+  }
+
+  .nb-action-menu{
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-flex: 1.5;
+    -ms-flex: 1.5;
+    flex: 1.5;
+  }
+
+  ::ng-deep .nb-theme-default .toggle-layout a i{
+    color: #40dc7e !important;
+    font-size: 2.25rem !important;
+    border-radius: 50% !important;
+    position: relative !important;
+    -webkit-animation-name: pulse-light !important;
+    animation-name: pulse-light !important;
+  }

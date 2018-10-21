@@ -1,0 +1,32 @@
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.csprojAssemblyReference.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.csproj.CoreCompileInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.AssemblyInfoInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.AssemblyInfo.cs
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Repository.deps.json
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Repository.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Repository.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.csproj.CopyComplete
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.csprojAssemblyReference.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.csproj.CoreCompileInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.AssemblyInfoInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.AssemblyInfo.cs
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Repository.deps.json
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Repository.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Repository.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Entities.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.xml
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Repository\obj\Debug\netcoreapp2.1\OD.Repository.csproj.CopyComplete

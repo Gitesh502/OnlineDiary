@@ -1,0 +1,6 @@
+:host .c-datepicker input{
+    width: 100% !important;
+}
+.c-diary-actions button{
+    margin-right:10px;
+}

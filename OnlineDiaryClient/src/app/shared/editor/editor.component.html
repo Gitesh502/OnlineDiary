@@ -1,0 +1,40 @@
+<div class="odeditor">
+  <div class="toolbar">
+    <ng-container *ngFor="let command of commands">
+      <button *ngIf="command.display" class="tool-items fa {{command.fontIcon}}" [title]="command.title" (click)="executeCommand(command.text, command.showUI, command.value);">
+      </button>
+    </ng-container>
+  </div>
+  <div class="editor" #editor contenteditable="true"
+  
+  ></div>
+</div>
+
+<jw-modal id="c-imageUploader" class="c-imageUploader">
+  <div class="c-model-content">
+    <div class="c-model-header">
+      <h4>Select Image</h4>
+    </div>
+    <div class="c-model-body">
+      <div class="c-image-uplaod">
+        <div class="file btn">
+          Browse image
+          <input type="file" name="file" (change)="readURL($event);" />
+        </div>
+      </div>
+      <div class="c-image-preview">
+        <ng-container *ngFor="let img of imageSrc">
+          <img  [src]="img" />
+        </ng-container>
+      </div>
+    </div>
+    <div class="c-model-footer">
+      <div class="c-mode-actinbuttons">
+          <button (click)="closeModal('c-imageUploader');" class="btn btn-default">Close</button>
+          <button (click)="setImages()" class="btn  c-btn">Ok</button>
+
+      </div>
+    </div>
+  </div>
+
+</jw-modal>

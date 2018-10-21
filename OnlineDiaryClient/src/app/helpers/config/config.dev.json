@@ -1,0 +1,8 @@
+{
+    "env": {
+        "name": "DEV"
+    },
+    "apiServer": {
+        "metadata": "https://localhost:44336/api/"
+    }
+}

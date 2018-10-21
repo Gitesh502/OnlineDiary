@@ -1,0 +1,46 @@
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.deps.json
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.runtimeconfig.json
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.runtimeconfig.dev.json
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Repository.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Repository.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.csprojAssemblyReference.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.csproj.CoreCompileInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.RazorAssemblyInfo.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.RazorAssemblyInfo.cs
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.AssemblyInfoInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.AssemblyInfo.cs
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.RazorTargetAssemblyInfo.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.csproj.CopyComplete
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.BLL.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.BLL.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.csprojAssemblyReference.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.csproj.CoreCompileInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.AssemblyInfoInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.AssemblyInfo.cs
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.deps.json
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.runtimeconfig.json
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.runtimeconfig.dev.json
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Api.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.BLL.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Entities.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Repository.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.BLL.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\bin\Debug\netcoreapp2.1\OD.Repository.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.RazorAssemblyInfo.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.RazorAssemblyInfo.cs
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.RazorTargetAssemblyInfo.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Api\obj\Debug\netcoreapp2.1\OD.Api.csproj.CopyComplete

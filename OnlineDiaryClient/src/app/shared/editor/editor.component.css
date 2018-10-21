@@ -1,0 +1,153 @@
+.odeditor .toolbar{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(20px,40px));
+    background-color: rgb(231, 231, 231);
+    /* color: rgb(0, 0, 0); */
+    grid-gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items:center;
+    border-radius: 10px;
+}
+.odeditor .tool-items{
+    background-color: #40dc7e;
+    color: #ffff;
+    border: 2px solid #3dcc6d; /* Green */
+    padding-top: .6rem;
+    padding-bottom:.6rem;
+    border-radius: 35px;
+}
+.odeditor label.tool-items{
+    margin-bottom:0px !important;
+}
+.odeditor .editor{
+    width:auto;
+    height: 50vh;
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0 .1rem .4rem black;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+.odeditor img{
+    width: 60px;
+    height: 60px;
+    margin-top: .4rem;
+    border-radius: 50rem;
+}
+.odeditor label {
+    margin-left: 0.04rem;
+    padding-left:.7rem
+}
+.c-model-content{
+    border:1px solid #ebeef2;
+}
+.c-model-header{
+    height: 50px;
+    border-bottom: 1px solid #ebeef2;
+    text-align: center;
+}
+.c-image-uplaod{
+    border-bottom: 1px solid #ebeef2;
+}
+.c-image-uplaod div.file {
+    position: relative;
+    overflow: hidden;
+    background-color: #40dc7e !important;
+    color:white;
+  }
+  .c-image-uplaod input {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+  }
+  .c-image-preview{
+      min-height: 300px;
+  }
+  .c-image-preview img {
+    object-fit: contain;
+    /* width: 100px; */
+    height: 100px;
+    padding:10px;
+  }
+  .c-model-footer{
+      height: 60px;
+  }
+  .c-mode-actinbuttons{
+      float: right;
+      padding: 10px;
+  }
+  .c-model-footer .c-mode-actinbuttons .c-btn{
+    background-color: #40dc7e !important;
+    margin-left:10px;
+  }
+/* .odeditor .tool-items{
+    background-color: rgb(27, 26, 26);
+     padding-top: .6rem;
+     padding-bottom:.6rem;
+    cursor: pointer;
+    color: #ffff;
+}
+.odeditor .tool-items:hover{
+    box-shadow: none;
+    background-color: #6b5e5e;
+}
+.odeditor .center{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+.odeditor .editor{
+    width:70vw;
+    height: 50vh;
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0 .1rem .4rem black;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+.odeditor .getcontent{
+    white-space: pre;
+    width: 80vw;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    padding: 1rem;
+    display: none;
+    margin-top: 1rem;
+    box-shadow: .1rem .1rem .5rem rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+.odeditor .btn{
+      padding: .5rem;
+      background-color: #7e1111;
+      margin-right: 1rem;
+      color: #fffffc;
+      letter-spacing: .1rem;
+      font-size: 1rem;
+      border-radius: .2rem;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 .4rem .4rem black;
+      transition: all .3s;
+}
+.odeditor .btn:hover{
+      background-color: #7e1111d0;
+      box-shadow: 0 .1rem .1rem black;
+}
+.odeditor img{
+    width: 60px;
+    height: 60px;
+    margin-top: .4rem;
+    border-radius: 50rem;
+}
+.odeditor label {
+    margin-left: 0.04rem;
+    padding-left:.7rem
+}
+.odeditor label.tool-items{
+    margin-bottom:0px !important;
+} */

@@ -1,0 +1,24 @@
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Interfaces.deps.json
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.csprojAssemblyReference.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.csproj.CoreCompileInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.AssemblyInfoInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.AssemblyInfo.cs
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.csproj.CopyComplete
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.csprojAssemblyReference.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.csproj.CoreCompileInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.AssemblyInfoInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.AssemblyInfo.cs
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Interfaces.deps.json
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Entities.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Interfaces\obj\Debug\netcoreapp2.1\OD.Interfaces.csproj.CopyComplete

@@ -1,0 +1,32 @@
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.BLL.deps.json
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.BLL.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.BLL.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.csprojAssemblyReference.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.csproj.CoreCompileInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.AssemblyInfoInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.AssemblyInfo.cs
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Repository.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Repository.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.csproj.CopyComplete
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.csprojAssemblyReference.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.csproj.CoreCompileInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.AssemblyInfoInputs.cache
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.AssemblyInfo.cs
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.BLL.deps.json
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.BLL.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.BLL.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Entities.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Interfaces.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Repository.dll
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Interfaces.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Repository.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+F:\Projects\OnlineDiary\OnlineDiaryServer\OD.BLL\obj\Debug\netcoreapp2.1\OD.BLL.csproj.CopyComplete

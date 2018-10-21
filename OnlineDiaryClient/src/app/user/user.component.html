@@ -1,0 +1,40 @@
+<nb-layout>
+    <nb-layout-header fixed>
+        <div class="header-container left">
+            <div class="logo-containter" style="display:flex">
+                <a (click)="toggle()" class="navigation"><i class="nb-menu"></i></a>
+                <div class="logo">Online Diary</div>
+            </div>
+        </div>
+
+        <div class="header-container right">
+            <nb-actions size="medium" class="right nb-action-menu">
+                <nb-action icon="nb-gear" class="toggle-layout"></nb-action>
+                <nb-action class="ng-star-inserted">
+                    <nb-user [nbContextMenu]="contextTtems" 
+                    nbContextMenuTag="my-context-menu"
+                    [name]="getUser().fullName"></nb-user>
+                </nb-action>
+            </nb-actions>
+        </div>
+    </nb-layout-header>
+    <nb-layout-header subheader>
+        <nb-actions>
+            <nb-action icon="nb-home"></nb-action>
+            <nb-action icon="nb-search"></nb-action>
+            <nb-action icon="nb-edit"></nb-action>
+        </nb-actions>
+    </nb-layout-header>
+    <nb-sidebar containerFixed="true">
+        <div class="main-container">
+            <nb-sidebar-header _ngcontent-c0="" class="ng-star-inserted"><a _ngcontent-c0="" class="btn btn-hero-success main-btn"
+                    href="https://github.com/akveo/nebular" target="_blank"><i _ngcontent-c0="" class="ion ion-social-github"></i><span
+                        _ngcontent-c0="">Support Us</span></a></nb-sidebar-header>
+            <nb-menu [items]="items">
+            </nb-menu>
+        </div>
+    </nb-sidebar>
+    <nb-layout-column>
+        <router-outlet></router-outlet>
+    </nb-layout-column>
+</nb-layout>
