@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbDialogModule, NbDatepickerModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbMenuModule, NbDialogModule, NbDatepickerModule, NbToastrModule } from '@nebular/theme';
 import { HttpModule } from '@angular/http';
 
 import { UserModule } from './user/user.module';
+import { ErrorModule } from './error/error.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
@@ -12,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
@@ -33,7 +35,9 @@ export function initializeApp(appConfig: AppConfig) {
     NbMenuModule.forRoot(),
     UserModule,
     NbDialogModule.forRoot(),
-    NbDatepickerModule.forRoot()
+    NbDatepickerModule.forRoot(),
+    ErrorModule,
+    NbToastrModule.forRoot(),
 
   ],
   providers: [
@@ -41,8 +45,7 @@ export function initializeApp(appConfig: AppConfig) {
        { provide: APP_INITIALIZER,
          useFactory: initializeApp,
          deps: [AppConfig], multi: true },
-         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        
   ],
   bootstrap: [AppComponent],
   

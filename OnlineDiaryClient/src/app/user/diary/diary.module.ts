@@ -9,6 +9,10 @@ import { Imports} from 'src/app/imports';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DiaryService } from './services/diary.service';
+
+
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { Ng2CompleterModule } from "ng2-completer";
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from 'src/app/helpers/jwt.interceptor';
 import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
@@ -19,7 +23,9 @@ import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
     Imports,
     DiaryRoutingModule,
     EditorModule,
-    SharedModule
+    SharedModule,
+    Ng2SmartTableModule,
+    Ng2CompleterModule
   ],
   declarations: [ViewComponent, AddComponent,DiaryComponent],
   providers:[

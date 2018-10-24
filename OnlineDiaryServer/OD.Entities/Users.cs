@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OD.Entities
 {
-    public class Users : IEntity
+    public partial class Users : IEntity
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

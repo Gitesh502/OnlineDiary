@@ -1,4 +1,5 @@
-﻿using OD.Entities;
+﻿using MongoDB.Driver;
+using OD.Entities;
 using OD.Interfaces;
 using OD.Interfaces.Interfaces;
 using System;
@@ -26,6 +27,17 @@ namespace OD.Repository.Repository
             catch (Exception ex)
             {
                 return false;
+            }
+        }
+        public async Task<List<Diary>> Find(FilterDefinition<Diary> Filter)
+        {
+            try
+            {
+                return await repository.GetAsync(Filter);
+            }
+            catch(Exception ex)
+            {
+                return new List<Diary>();
             }
         }
     }

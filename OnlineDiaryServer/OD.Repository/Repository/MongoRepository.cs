@@ -20,6 +20,10 @@ namespace OD.Repository
             this.Collection = MongoDatabase.GetCollection<TEntity>(typeof(TEntity).Name);
         }
 
+        public virtual async Task<List<TEntity>> GetAsync(FilterDefinition<TEntity> Filter)
+        {
+            return await Collection.Find(Filter).ToListAsync();
+        }
 
         public virtual async Task<TEntity> GetOneAsync(FilterDefinition<TEntity> Filter)
         {

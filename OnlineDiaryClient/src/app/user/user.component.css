@@ -63,3 +63,15 @@
     -webkit-animation-name: pulse-light !important;
     animation-name: pulse-light !important;
   }
+
+  .c-subheader.right{
+    width:100%;
+  }
+
+  .c-subheader.right nb-actions{
+    float: right;
+  }
+  
+  .fas.active{
+    color: #40dc7e;
+  }

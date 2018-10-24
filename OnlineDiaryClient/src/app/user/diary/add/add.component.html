@@ -1,4 +1,4 @@
-<form #form="ngForm" (ngSubmit)="addDiary();submitted=true">
+<form #form="ngForm"  autocomplete="off">
 <nb-card>
     <nb-card-header>
         <div class="c-diary-title">
@@ -8,8 +8,8 @@
     <nb-card-body>
         
             <div class="form-group">
-                <input fullwidth id="diaryTitle" [(ngModel)]="diary.title" name="diaryTitle" nbinput placeholder="Title"
-                    class="input-full-width input-md input-rectangle" required>
+                <input fullwidth id="diaryTitle" [(ngModel)]="diary.title" name="diaryTitle" nbinput placeholder="Title (If not given, your title will be Page No)"
+                    class="input-full-width input-md input-rectangle">
             </div>
             <div class="form-group c-datepicker">
                 <input [(ngModel)]="diary.createdOn"
@@ -26,7 +26,7 @@
     </nb-card-body>
     <nb-card-footer>
         <div class="c-diary-actions">
-            <button nbButton status="success"
+            <button nbButton status="success" (click)="addDiary();submitted=true"
             [disabled]="submitted || !form.valid" [class.btn-pulse]="submitted"
             >
                 Save Diary

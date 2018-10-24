@@ -4,6 +4,7 @@ import { StorageService } from '../shared/services/storage/storage.service';
 import { filter, map } from 'rxjs/operators';
 import { AuthService } from '../auth/services/auth.service';
 import { Router } from '@angular/router';
+import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
   selector: 'app-user',
@@ -18,7 +19,8 @@ export class UserComponent implements OnInit {
     private storage:StorageService,
     private nbMenuService: NbMenuService,
     private authService:AuthService,
-    private router:Router
+    private router:Router,
+    public utility:UtilityService
     ) { }
 
   ngOnInit() {
@@ -51,7 +53,7 @@ export class UserComponent implements OnInit {
           },
           {
             title: 'View',
-            ulr: '#', // goes directly into `href` attribute
+            link: ['diary/view'], // goes directly into `href` attribute
           }
         ],
       },
@@ -84,5 +86,9 @@ export class UserComponent implements OnInit {
 
   getUser():any{
     return this.storage.get('user').user;
+  }
+
+  toggleView(view){
+    this.utility.diaryViewType = view;
   }
 }

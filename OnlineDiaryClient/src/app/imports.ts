@@ -12,7 +12,8 @@ import {
     NbUserModule,
     NbContextMenuModule,
     NbDialogModule,
-    NbDatepickerModule
+    NbDatepickerModule,
+    NbToastrModule
 
 } from "@nebular/theme";
 import { RouterModule } from "@angular/router";
@@ -40,7 +41,8 @@ import {HttpClientModule} from '@angular/common/http';
         NbContextMenuModule,
         NbDialogModule,
         NbDatepickerModule,
-        FormsModule 
+        FormsModule ,
+        NbToastrModule
     ],
   })
 export class Imports{
