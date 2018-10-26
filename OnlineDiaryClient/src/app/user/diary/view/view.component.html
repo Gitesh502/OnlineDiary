@@ -1,5 +1,5 @@
 
-<nb-card>
+<nb-card [nbSpinner]="msgService.loading" nbSpinnerStatus="success">
     <nb-card-body>
         <div class="c-row">
             <ng-container *ngIf="dairiesList && dairiesList.length>0;else noDiaries">
@@ -40,7 +40,11 @@
         <h4></h4>
       </div>
       <div class="c-model-body">
-        <div class="book-view" *ngIf="isBookView">
+        <app-book 
+        [isBookView]="isBookView" 
+        [dairiesList]="dairiesList">
+      </app-book>
+        <!-- <div class="book-view" *ngIf="isBookView">
           <div id="book">
               <canvas id="pageflip-canvas"></canvas>
               <div id="pages">
@@ -58,7 +62,7 @@
                 </ng-container>
               </div>
             </div>
-      </div>
+      </div> -->
       </div>
       <div class="c-model-footer">
         <div class="c-mode-actinbuttons">

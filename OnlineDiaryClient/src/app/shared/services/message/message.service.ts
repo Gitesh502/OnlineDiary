@@ -8,6 +8,7 @@ import { NbToastrService } from '@nebular/theme';
 export class MessageService {
 
   messages: message;
+  loading:false;
   constructor(private toastrService: NbToastrService) {
     this.messages = new message();
   }
@@ -26,6 +27,9 @@ export class MessageService {
     this.messages.messages = [];
     this.messages.display = false;
     this.messages.valid = false;
+  }
+  setLoading(isLoad){
+    this.loading = isLoad;
   }
   toastr(status, message, title, config?) {
     switch (status) {

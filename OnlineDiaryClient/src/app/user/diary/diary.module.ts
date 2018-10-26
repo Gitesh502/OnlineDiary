@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 
 import { DiaryRoutingModule } from './diary-routing.module';
 import { ViewComponent } from './view/view.component';
@@ -16,6 +16,7 @@ import { Ng2CompleterModule } from "ng2-completer";
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from 'src/app/helpers/jwt.interceptor';
 import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
+import { GlobalErrorHandlerService } from 'src/app/helpers/global.errorhandler';
 
 
 @NgModule({
@@ -32,6 +33,8 @@ import { ErrorInterceptor } from 'src/app/helpers/error.interceptor';
     DiaryService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    GlobalErrorHandlerService,
+    { provide: ErrorHandler, useClass: GlobalErrorHandlerService },
   ]
 })
 export class DiaryModule { }

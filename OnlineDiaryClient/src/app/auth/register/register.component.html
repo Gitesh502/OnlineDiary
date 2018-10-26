@@ -1,99 +1,89 @@
-<h2 class="title">Sign Up</h2>
-<small class="form-text sub-title">Hello! Sign up and record your memories</small>
-<!-- <nb-alert *ngIf="showMessages.error && showMessages.errors?.length && !showMessages.submitted" outline="danger" role="alert">
-    <p class="alert-title"><b>Oh snap!</b></p>
-    <ul class="alert-message-list">
-      <li *ngFor="let error of showMessages.errors" class="alert-message">{{ error }}</li>
-    </ul>
-  </nb-alert>
+<div class="c-register">
+  <h2 class="title">Sign Up</h2>
+  <small class="form-text sub-title">Hello! Sign up and record your memories</small>
+  <alert-message></alert-message>
+  <form aria-labelledby="title" #form="ngForm" (ngSubmit)="register();submitted=true">
+    <div class="form-group">
+      <input [(ngModel)]="user.fullName" fullwidth id="input-name" name="fullName" nbinput placeholder="Full Name" class="input-full-width input-md input-rectangle"
+        required #fullName="ngModel">
+      <ng-container *ngIf="fullName.invalid && fullName.touched">
+        <p class="error-message" *ngIf="fullName.errors?.required">
+          Full name is required!
+        </p>
+        <p class="error-message" *ngIf="fullName.errors?.minlength || fullName.errors?.maxlength">
+          Full name should contains
+          from {{getConfigValue('forms.validation.fullName.minLength')}}
+          to {{getConfigValue('forms.validation.fullName.maxLength')}}
+          characters
+        </p>
+      </ng-container>
+    </div>
   
-  <nb-alert *ngIf="showMessages.success && showMessages.messages?.length && !showMessages.submitted" outline="success" role="alert">
-    <p class="alert-title"><b>Hooray!</b></p>
-    <ul class="alert-message-list">
-      <li *ngFor="let message of showMessages.messages" class="alert-message">{{ message }}</li>
-    </ul>
-  </nb-alert> -->
-<alert-message></alert-message>
-<form aria-labelledby="title" #form="ngForm" (ngSubmit)="register();submitted=true">
-  <div class="form-group">
-    <input [(ngModel)]="user.fullName" fullwidth id="input-name" name="fullName" nbinput placeholder="Full Name" class="input-full-width input-md input-rectangle"
-      required #fullName="ngModel">
-    <ng-container *ngIf="fullName.invalid && fullName.touched">
-      <p class="error-message" *ngIf="fullName.errors?.required">
-        Full name is required!
-      </p>
-      <p class="error-message" *ngIf="fullName.errors?.minlength || fullName.errors?.maxlength">
-        Full name should contains
-        from {{getConfigValue('forms.validation.fullName.minLength')}}
-        to {{getConfigValue('forms.validation.fullName.maxLength')}}
-        characters
-      </p>
-    </ng-container>
+    <div class="form-group">
+      <input [(ngModel)]="user.email" nbInput id="input-email" name="email" pattern=".+@.+..+" placeholder="Email address"
+        fullWidth class="input-full-width input-md input-rectangle" required #email="ngModel" />
+      <ng-container *ngIf="email.invalid && email.touched">
+        <p class="error-message" *ngIf="email.errors?.required">
+          Email is required!
+        </p>
+        <p class="error-message" *ngIf="email.errors?.pattern">
+          Email should be the real one!
+        </p>
+      </ng-container>
+    </div>
+  
+    <div class="form-group">
+      <input [(ngModel)]="user.password" nbInput type="password" id="input-password" name="password" placeholder="Password"
+        fullWidth required #password="ngModel" />
+      <ng-container *ngIf="password.invalid && password.touched">
+        <p class="error-message" *ngIf="password.errors?.required">
+          Password is required!
+        </p>
+        <p class="error-message" *ngIf="password.errors?.minlength || password.errors?.maxlength">
+          Password should contains
+          from {{ getConfigValue('forms.validation.password.minLength') }}
+          to {{ getConfigValue('forms.validation.password.maxLength') }}
+          characters
+        </p>
+      </ng-container>
+    </div>
+  
+    <div class="form-group">
+      <input [(ngModel)]="user.confirmPassword" nbInput type="password" id="input-re-password" name="rePass" placeholder="Confirm Password"
+        fullWidth required #rePass="ngModel" />
+      <ng-container *ngIf="rePass.invalid && rePass.touched">
+        <p class="error-message" *ngIf="rePass.errors?.required">
+          Password confirmation is required!
+        </p>
+        <p class="error-message" *ngIf="password.value != rePass.value && !rePass.errors?.required">
+          Password does not match the confirm password.
+        </p>
+      </ng-container>
+    </div>
+  
+    <div class="form-group accept-group">
+      <nb-checkbox name="terms">
+        <label class="customised-control customised-checkbox">
+          <span class="customised-control-description rememberme">Agree to <a href="#" target="_blank"><strong>Terms &
+                Conditions</strong></a></span>
+        </label>
+  
+      </nb-checkbox>
+    </div>
+  
+    <button nbButton fullWidth status="success" [disabled]="alertMsg.get().submitted || !form.valid" [class.btn-pulse]="alertMsg.get().submitted">
+      Register
+    </button>
+  </form>
+  <div class="links">
+    <small class="form-text">Or connect with:</small>
+    <div class="socials">
+      <a href="https://github.com/akveo/nebular" target="_blank" class="socicon-github with-icon"></a>
+      <a href="https://www.facebook.com/akveo/" target="_blank" class="socicon-facebook with-icon"></a>
+      <a href="https://twitter.com/akveo_inc" target="_blank" class="socicon-twitter with-icon"></a>
+    </div>
+    <small class="form-text"> Already have an account?
+      <a [routerLink]="['/auth/login']" routerLinkActive="active"><strong>Sign In</strong></a></small>
   </div>
-
-  <div class="form-group">
-    <input [(ngModel)]="user.email" nbInput id="input-email" name="email" pattern=".+@.+..+" placeholder="Email address"
-      fullWidth class="input-full-width input-md input-rectangle" required #email="ngModel" />
-    <ng-container *ngIf="email.invalid && email.touched">
-      <p class="error-message" *ngIf="email.errors?.required">
-        Email is required!
-      </p>
-      <p class="error-message" *ngIf="email.errors?.pattern">
-        Email should be the real one!
-      </p>
-    </ng-container>
-  </div>
-
-  <div class="form-group">
-    <input [(ngModel)]="user.password" nbInput type="password" id="input-password" name="password" placeholder="Password"
-      fullWidth required #password="ngModel" />
-    <ng-container *ngIf="password.invalid && password.touched">
-      <p class="error-message" *ngIf="password.errors?.required">
-        Password is required!
-      </p>
-      <p class="error-message" *ngIf="password.errors?.minlength || password.errors?.maxlength">
-        Password should contains
-        from {{ getConfigValue('forms.validation.password.minLength') }}
-        to {{ getConfigValue('forms.validation.password.maxLength') }}
-        characters
-      </p>
-    </ng-container>
-  </div>
-
-  <div class="form-group">
-    <input [(ngModel)]="user.confirmPassword" nbInput type="password" id="input-re-password" name="rePass" placeholder="Confirm Password"
-      fullWidth required #rePass="ngModel" />
-    <ng-container *ngIf="rePass.invalid && rePass.touched">
-      <p class="error-message" *ngIf="rePass.errors?.required">
-        Password confirmation is required!
-      </p>
-      <p class="error-message" *ngIf="password.value != rePass.value && !rePass.errors?.required">
-        Password does not match the confirm password.
-      </p>
-    </ng-container>
-  </div>
-
-  <div class="form-group accept-group">
-    <nb-checkbox name="terms">
-      <label class="customised-control customised-checkbox">
-        <span class="customised-control-description rememberme">Agree to <a href="#" target="_blank"><strong>Terms &
-              Conditions</strong></a></span>
-      </label>
-
-    </nb-checkbox>
-  </div>
-
-  <button nbButton fullWidth status="success" [disabled]="alertMsg.get().submitted || !form.valid" [class.btn-pulse]="alertMsg.get().submitted">
-    Register
-  </button>
-</form>
-<div class="links">
-  <small class="form-text">Or connect with:</small>
-  <div class="socials">
-    <a href="https://github.com/akveo/nebular" target="_blank" class="socicon-github with-icon"></a>
-    <a href="https://www.facebook.com/akveo/" target="_blank" class="socicon-facebook with-icon"></a>
-    <a href="https://twitter.com/akveo_inc" target="_blank" class="socicon-twitter with-icon"></a>
-  </div>
-  <small class="form-text"> Already have an account?
-    <a [routerLink]="['/auth/login']" routerLinkActive="active"><strong>Sign In</strong></a></small>
 </div>
+

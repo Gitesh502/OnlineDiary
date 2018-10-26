@@ -1,0 +1,19 @@
+<div class="book-view">
+  <div id="book" *ngIf="isBookView">
+      <canvas id="pageflip-canvas"></canvas>
+      <div id="pages">
+        <ng-container *ngFor="let diary of dairiesList">
+            <section>
+                <div>
+                  <span class="right">
+                    <h4>{{diary.createdOn|date:'MMM d y'}}</h4>
+                  </span>
+                  <h2>{{diary.title}}</h2>
+                  <p [innerHTML]="diary.body"></p>
+                  <b>{{diary.pageNo}}</b>
+                </div>
+              </section>
+        </ng-container>
+      </div>
+    </div>
+</div>

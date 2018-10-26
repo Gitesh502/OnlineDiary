@@ -1,4 +1,4 @@
-<nb-layout>
+<nb-layout restoreScrollTop="true">
     <nb-layout-header fixed>
         <div class="header-container left">
             <div class="logo-containter" style="display:flex">
@@ -24,7 +24,7 @@
                 <nb-action icon="nb-edit"></nb-action>
             </nb-actions>
         </div>
-        <div class="c-subheader right">
+        <div class="c-subheader right" *ngIf="showMenuOpts('diaryListView')">
             <nb-actions>
                 <nb-action  [className]="utility.diaryViewType=='List'?'fas fa-list-ul active':'fas fa-list-ul'"  (click)="toggleView('List')">
                 </nb-action>

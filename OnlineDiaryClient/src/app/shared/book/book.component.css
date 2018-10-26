@@ -1,0 +1,42 @@
+#book {
+    background: url("src/assets/images/book.png") no-repeat;
+    position: relative;
+    width: 1500px;
+    height: 800px;
+    background-size: 1500px 800px;
+    margin: auto;
+}
+#pages section {
+    background: url("src/assets/images/paper.png") no-repeat;
+    display: block;
+    width: 723px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    overflow: hidden;
+    background-size: 1000px 1000px;
+}
+#pages section>div {
+    display: block;
+    width: 700px;
+    height: 750px;
+    font-size: 12px;
+}
+#pages section p, #pages section h2 {
+    padding: 3px 35px;
+    line-height: 1.4em;
+    text-align: justify;
+    padding-right:0px;
+}
+#pages section h2{
+    margin: 15px 0 10px;
+}
+#pageflip-canvas {
+    position: relative;
+    z-index: 0;
+}
+#pages section p{
+    height: 670px;
+    overflow-y: auto;
+}
