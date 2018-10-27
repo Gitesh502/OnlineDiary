@@ -19,4 +19,7 @@ export class DiaryService {
   add(diary:any){
     return this.http.post(AppConfig.settings.apiServer.metadata+"diary/save",JSON.stringify(diary),this.httpOptions);
   }
+  get(){
+    return this.http.get(AppConfig.settings.apiServer.metadata+"diary/getByUserId",this.httpOptions);
+  }
 }

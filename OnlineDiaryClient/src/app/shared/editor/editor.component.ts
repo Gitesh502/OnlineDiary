@@ -145,4 +145,8 @@ export class EditorComponent implements OnInit {
   getEditorBody():string{
     return this.editorContent.nativeElement.innerHTML;
   }
+
+  clear(){
+    this.editorContent.nativeElement.innerHTML="";
+  }
 }

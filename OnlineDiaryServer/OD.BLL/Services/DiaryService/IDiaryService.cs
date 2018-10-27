@@ -9,5 +9,6 @@ namespace OD.BLL.Services
     public interface IDiaryService
     {
         Task<bool> AddDiary(Diary Diary);
+        Task<List<Diary>> GetByUserId(string UserId);
     }
 }

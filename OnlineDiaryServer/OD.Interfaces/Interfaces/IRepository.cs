@@ -10,6 +10,8 @@ namespace OD.Interfaces
 {
     public interface IRepository<TEntity, in TKey> where TEntity : IEntity<TKey>
     {
+        Task<List<TEntity>> GetAsync(FilterDefinition<TEntity> Filter);
+
         Task<TEntity> GetOneAsync(FilterDefinition<TEntity> Filter);
 
         Task<TEntity> SaveAsync(TEntity entity);

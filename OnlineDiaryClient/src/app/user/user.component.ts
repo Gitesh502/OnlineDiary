@@ -4,6 +4,7 @@ import { StorageService } from '../shared/services/storage/storage.service';
 import { filter, map } from 'rxjs/operators';
 import { AuthService } from '../auth/services/auth.service';
 import { Router } from '@angular/router';
+import { UtilityService } from 'src/app/shared/services/utility/utility.service';
 
 @Component({
   selector: 'app-user',
@@ -15,11 +16,12 @@ export class UserComponent implements OnInit {
   contextTtems = [];
   constructor(
     private sidebarService: NbSidebarService,
-    private storage:StorageService,
+    private storage: StorageService,
     private nbMenuService: NbMenuService,
-    private authService:AuthService,
-    private router:Router
-    ) { }
+    private authService: AuthService,
+    private router: Router,
+    public utility: UtilityService
+  ) { }
 
   ngOnInit() {
     this.initMenu();
@@ -32,7 +34,7 @@ export class UserComponent implements OnInit {
         this.authService.logout();
         this.router.navigate(['/auth/login']);
       });
-  
+
   }
   toggle() {
     this.sidebarService.toggle(true);
@@ -43,7 +45,7 @@ export class UserComponent implements OnInit {
       {
         title: 'Diary',
         expanded: false,
-        icon:'fa fa-book',
+        icon: 'fa fa-book',
         children: [
           {
             title: 'Add',
@@ -51,13 +53,13 @@ export class UserComponent implements OnInit {
           },
           {
             title: 'View',
-            ulr: '#', // goes directly into `href` attribute
+            link: ['diary/view'], // goes directly into `href` attribute
           }
         ],
       },
       {
         title: 'Tasks',
-        icon:'fa fa-tasks',
+        icon: 'fa fa-tasks',
         link: [],
         children: [
           {
@@ -72,7 +74,7 @@ export class UserComponent implements OnInit {
       },
       {
         title: 'Logout',
-        icon:'fa fa-sign-out-alt',
+        icon: 'fa fa-sign-out-alt',
         link: [],
       },
     ];
@@ -82,7 +84,24 @@ export class UserComponent implements OnInit {
     ];
   }
 
-  getUser():any{
+  getUser(): any {
     return this.storage.get('user').user;
+  }
+
+  toggleView(view) {
+    this.utility.diaryViewType = view;
+  }
+
+  showMenuOpts(type) {
+    switch (type) {
+      case 'diaryListView':
+        if (this.getUrl().indexOf("diary/view") > -1)
+          return true;
+        return false;
+    }
+  }
+
+  getUrl(): string {
+    return this.router.url;
   }
 }

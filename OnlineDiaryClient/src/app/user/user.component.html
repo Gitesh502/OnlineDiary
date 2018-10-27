@@ -1,4 +1,4 @@
-<nb-layout>
+<nb-layout restoreScrollTop="true">
     <nb-layout-header fixed>
         <div class="header-container left">
             <div class="logo-containter" style="display:flex">
@@ -11,19 +11,28 @@
             <nb-actions size="medium" class="right nb-action-menu">
                 <nb-action icon="nb-gear" class="toggle-layout"></nb-action>
                 <nb-action class="ng-star-inserted">
-                    <nb-user [nbContextMenu]="contextTtems" 
-                    nbContextMenuTag="my-context-menu"
-                    [name]="getUser().fullName"></nb-user>
+                    <nb-user [nbContextMenu]="contextTtems" nbContextMenuTag="my-context-menu" [name]="getUser().fullName"></nb-user>
                 </nb-action>
             </nb-actions>
         </div>
     </nb-layout-header>
     <nb-layout-header subheader>
-        <nb-actions>
-            <nb-action icon="nb-home"></nb-action>
-            <nb-action icon="nb-search"></nb-action>
-            <nb-action icon="nb-edit"></nb-action>
-        </nb-actions>
+        <div class="c-subheader left">
+            <nb-actions>
+                <nb-action icon="nb-home"></nb-action>
+                <nb-action icon="nb-search"></nb-action>
+                <nb-action icon="nb-edit"></nb-action>
+            </nb-actions>
+        </div>
+        <div class="c-subheader right" *ngIf="showMenuOpts('diaryListView')">
+            <nb-actions>
+                <nb-action  [className]="utility.diaryViewType=='List'?'fas fa-list-ul active':'fas fa-list-ul'"  (click)="toggleView('List')">
+                </nb-action>
+                <nb-action  [className]="utility.diaryViewType=='Grid'?'fas fa-th-large active':'fas fa-th-large'" (click)="toggleView('Grid')"></nb-action>
+            </nb-actions>
+        </div>
+
+
     </nb-layout-header>
     <nb-sidebar containerFixed="true">
         <div class="main-container">

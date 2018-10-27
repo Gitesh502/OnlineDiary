@@ -1,12 +1,13 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace OD.Entities
 {
-    public class Diary:IEntity
+    public partial class Diary:IEntity
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -17,5 +18,6 @@ namespace OD.Entities
         public DateTime? CreatedOn { get; set; }
         public string CreatedBy { get; set; }
         public bool IsActive { get; set; }
+        public long PageNo { get; set; }
     }
 }

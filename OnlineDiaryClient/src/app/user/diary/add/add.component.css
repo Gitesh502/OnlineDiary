@@ -4,3 +4,6 @@
 .c-diary-actions button{
     margin-right:10px;
 }
+::ng-deep .nb-theme-default nb-card{
+    height:calc(100vh - 2 * 7.00rem)
+}

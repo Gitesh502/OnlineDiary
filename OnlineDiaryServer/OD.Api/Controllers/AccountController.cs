@@ -33,6 +33,7 @@ namespace OD.Api.Controllers
             , IUserService userService
             , IOptions<AppSettings> config)
         {
+
             _mapper = mapper;
             _userService = userService;
             this.config = config;

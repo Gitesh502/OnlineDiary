@@ -1,19 +1,18 @@
-<form #form="ngForm" (ngSubmit)="addDiary();submitted=true">
-<nb-card>
-    <nb-card-header>
-        <div class="c-diary-title">
-            Add Diary
-        </div>
-    </nb-card-header>
-    <nb-card-body>
-        
+<form #form="ngForm" autocomplete="off">
+    <nb-card>
+        <nb-card-header>
+            <div class="c-diary-title">
+                Add Diary
+            </div>
+        </nb-card-header>
+        <nb-card-body>
+
             <div class="form-group">
-                <input fullwidth id="diaryTitle" [(ngModel)]="diary.title" name="diaryTitle" nbinput placeholder="Title"
-                    class="input-full-width input-md input-rectangle" required>
+                <input fullwidth id="diaryTitle" [(ngModel)]="diary.title" name="diaryTitle" nbinput placeholder="Title (If not given, your title will be Page No)"
+                    class="input-full-width input-md input-rectangle">
             </div>
             <div class="form-group c-datepicker">
-                <input [(ngModel)]="diary.createdOn"
-                name="diaryDate" [nbDatepicker]="datepicker" nbInput placeholder="Pick Date"
+                <input [(ngModel)]="diary.createdOn" name="diaryDate" [nbDatepicker]="datepicker" nbInput placeholder="Pick Date"
                     fullwidth required>
                 <nb-datepicker #datepicker></nb-datepicker>
             </div>
@@ -21,20 +20,19 @@
             <div class="form-group">
                 <app-editor></app-editor>
             </div>
-       
 
-    </nb-card-body>
-    <nb-card-footer>
-        <div class="c-diary-actions">
-            <button nbButton status="success"
-            [disabled]="submitted || !form.valid" [class.btn-pulse]="submitted"
-            >
-                Save Diary
-            </button>
-            <button nbButton status="danger">
-                Reset
-            </button>
-        </div>
-    </nb-card-footer>
-</nb-card>
+
+        </nb-card-body>
+        <nb-card-footer>
+            <div class="c-diary-actions">
+                <button nbButton status="success" (click)="addDiary();submitted=true" [disabled]="submitted || !form.valid"
+                    [class.btn-pulse]="submitted">
+                    Save Diary
+                </button>
+                <button nbButton status="danger">
+                    Reset
+                </button>
+            </div>
+        </nb-card-footer>
+    </nb-card>
 </form>

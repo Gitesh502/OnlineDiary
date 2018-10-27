@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using OD.Api.ApiModels.Request;
+using OD.Api.ApiModels.Response;
 using OD.Api.Helpers;
 using OD.BLL.Services;
 using OD.Entities;
@@ -32,6 +33,7 @@ namespace OD.Api.Controllers
           , IOptions<AppSettings> config
           , IHttpContextAccessor httpContextAccessor)
         {
+
             _mapper = mapper;
             _diaryService = diaryService;
             this.config = config;
@@ -45,9 +47,6 @@ namespace OD.Api.Controllers
         {
             try
             {
-
-                 var claims = User.FindFirst("email");
-
                 DiaryRequest.CreatedBy = this.UserId;
                 var DiaryDto = _mapper.Map<Diary>(DiaryRequest);
                 var result = await _diaryService.AddDiary(DiaryDto);
@@ -60,9 +59,25 @@ namespace OD.Api.Controllers
             catch(Exception ex)
             {
                 return Ok(new { status = HttpStatusCode.InternalServerError, valid = true, msg = ex.InnerException.Message });
-
             }
+        }
 
+        [Route("GetByUserId"),HttpGet]
+        public async Task<IActionResult> GetByUserId()
+        {
+            try
+            {
+                var diaries= await _diaryService.GetByUserId(this.UserId);
+                List<DiaryResponseModel> diariesResponse = _mapper.Map<List<DiaryResponseModel>>(diaries);
+                if(diariesResponse.Count()>0)
+                return Ok(new { status = HttpStatusCode.InternalServerError, valid = true, msg = "",response= diariesResponse });
+                else
+                    return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, msg = "No diaries added by you", response = diariesResponse });
+            }
+            catch(Exception ex)
+            {
+                return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, msg = ex.InnerException.Message });
+            }
         }
     } 
 }

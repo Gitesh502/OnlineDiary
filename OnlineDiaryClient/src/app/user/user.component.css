@@ -2,10 +2,6 @@
     font-size: 2rem;
     text-decoration: none;
   }
-  :host nb-layout-column {
-    /* height: 50vw; */
-    /* padding: 2.25rem 2.25rem .75rem !important; */
-  }
   :host nb-layout-column:first-child {
     background: #f4f4f7;
   }
@@ -63,3 +59,19 @@
     -webkit-animation-name: pulse-light !important;
     animation-name: pulse-light !important;
   }
+
+  .c-subheader.right{
+    width:100%;
+  }
+
+  .c-subheader.right nb-actions{
+    float: right;
+  }
+  
+  .fas.active{
+    color: #40dc7e;
+  }
+
+  ::ng-deep .nb-theme-default nb-card{
+    height:calc(100vh - 2 * 7.00rem)
+}

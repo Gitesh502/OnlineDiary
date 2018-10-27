@@ -1,0 +1,15 @@
+.title{
+    font-family: Exo;
+    font-size: 28px;
+    text-align: center;
+    text-size-adjust: 100%;
+}
+.sub-title,.links{
+    color:rgb(164, 171, 179);
+    font-size: 12.25px;
+    line-height: 15.3125px;
+    margin-bottom: 28px;
+    text-align: center;
+    margin-top: 3.5px;
+    text-size-adjust: 100%;
+}

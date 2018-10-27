@@ -1,3 +1,76 @@
-<p>
-  view works!
-</p>
+
+<nb-card [nbSpinner]="msgService.loading" nbSpinnerStatus="success">
+    <nb-card-body>
+        <div class="c-row">
+            <ng-container *ngIf="dairiesList && dairiesList.length>0;else noDiaries">
+              <ng-container [ngSwitch]="utility.diaryViewType">
+                <ng-container *ngSwitchCase="'Grid'">
+                    <ng-container *ngFor="let diary of dairiesList" >
+                        <div class="card-holder">
+                          <div class="instructions paper" (click)="showBook()">
+                            <div class="header">
+                              {{diary.createdOn | date:'MMM d y'}}
+                            </div>
+                            <p>
+                              {{diary.title}}
+                            </p>
+                          </div>
+                        </div>
+                      </ng-container>
+                </ng-container>
+                <ng-container *ngSwitchCase="'List'">
+                    <ng2-smart-table [settings]="settings" [source]="tableData"></ng2-smart-table>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+            <ng-template #noDiaries>
+              <alert-message></alert-message>
+            </ng-template>
+          </div>
+
+         
+    </nb-card-body>
+  </nb-card>
+
+  
+
+  <jw-modal id="c-book-view" class="c-imageUploader">
+    <div class="c-model-content">
+      <div class="c-model-header">
+        <h4></h4>
+      </div>
+      <div class="c-model-body">
+        <app-book 
+        [isBookView]="isBookView" 
+        [dairiesList]="dairiesList">
+      </app-book>
+        <!-- <div class="book-view" *ngIf="isBookView">
+          <div id="book">
+              <canvas id="pageflip-canvas"></canvas>
+              <div id="pages">
+                <ng-container *ngFor="let diary of dairiesList">
+                    <section>
+                        <div>
+                          <span class="right">
+                            <h4>{{diary.createdOn|date:'MMM d y'}}</h4>
+                          </span>
+                          <h2>{{diary.title}}</h2>
+                          <p [innerHTML]="diary.body"></p>
+                          <b>{{diary.pageNo}}</b>
+                        </div>
+                      </section>
+                </ng-container>
+              </div>
+            </div>
+      </div> -->
+      </div>
+      <div class="c-model-footer">
+        <div class="c-mode-actinbuttons">
+            <!-- <button (click)="closeModal('c-book-view');" class="btn btn-default">Close</button> -->
+            <!-- <button (click)="setImages()" class="btn  c-btn">Ok</button>
+   -->
+        </div>
+      </div>
+    </div>
+  
+  </jw-modal>
