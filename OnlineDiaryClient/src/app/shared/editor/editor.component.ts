@@ -146,6 +146,10 @@ export class EditorComponent implements OnInit {
     return this.editorContent.nativeElement.innerHTML;
   }
 
+  setEditor(body:string){
+     this.editorContent.nativeElement.innerHTML=body;
+  }
+
   clear(){
     this.editorContent.nativeElement.innerHTML="";
   }

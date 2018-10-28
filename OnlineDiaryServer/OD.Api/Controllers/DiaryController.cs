@@ -48,6 +48,11 @@ namespace OD.Api.Controllers
             try
             {
                 DiaryRequest.CreatedBy = this.UserId;
+                var DiaryList = await _diaryService.GetByUserId(this.UserId);
+                int IsAdded = DiaryList.Where(a => a.CreatedOn.Value.Date == DiaryRequest.CreatedOn.Value.Date).Count();
+                if(IsAdded > 0) {
+                       return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, type="alert", msg = "You can add one page per day!" });
+                }
                 var DiaryDto = _mapper.Map<Diary>(DiaryRequest);
                 var result = await _diaryService.AddDiary(DiaryDto);
                 if (result)
@@ -57,6 +62,26 @@ namespace OD.Api.Controllers
                 return Ok(new { status = HttpStatusCode.InternalServerError, valid = true, msg = "Something went wrong" });
             }
             catch(Exception ex)
+            {
+                return Ok(new { status = HttpStatusCode.InternalServerError, valid = true, msg = ex.InnerException.Message });
+            }
+        }
+
+        [Route("Update"), HttpPost]
+        public async Task<IActionResult> Update(DiaryRequestModel DiaryRequest)
+        {
+            try
+            {
+                DiaryRequest.CreatedBy = this.UserId;
+                var DiaryDto = _mapper.Map<Diary>(DiaryRequest);
+                var result = await _diaryService.UpdateDiary(DiaryDto);
+                if (result!=null)
+                {
+                    return Ok(new { status = HttpStatusCode.OK, valid = true, msg = "Diary updated successfully",response= result });
+                }
+                return Ok(new { status = HttpStatusCode.InternalServerError, valid = true, msg = "Something went wrong" });
+            }
+            catch (Exception ex)
             {
                 return Ok(new { status = HttpStatusCode.InternalServerError, valid = true, msg = ex.InnerException.Message });
             }
@@ -75,6 +100,31 @@ namespace OD.Api.Controllers
                     return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, msg = "No diaries added by you", response = diariesResponse });
             }
             catch(Exception ex)
+            {
+                return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, msg = ex.InnerException.Message });
+            }
+        }
+
+        [Route("GetByPage"),HttpGet]
+        public async Task<IActionResult> GetByPage(int PageNo)
+        {
+            try
+            {
+                var Page = await _diaryService.GetByPage(PageNo , this.UserId);
+                if(Page != null)
+                {
+                    DiaryResponseModel diariesResponse = _mapper.Map<DiaryResponseModel>(Page);
+                    if (diariesResponse!=null)
+                        return Ok(new { status = HttpStatusCode.OK, valid = true, msg = "", response = diariesResponse });
+                    else
+                        return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, msg = "No diaries with this page number", response = diariesResponse });
+                }
+                else
+                {
+                    return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, msg = "No diaries created by you" });
+                }
+            }
+            catch (Exception ex)
             {
                 return Ok(new { status = HttpStatusCode.InternalServerError, valid = false, msg = ex.InnerException.Message });
             }

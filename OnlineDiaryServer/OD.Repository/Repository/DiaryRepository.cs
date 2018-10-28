@@ -40,5 +40,16 @@ namespace OD.Repository.Repository
                 return new List<Diary>();
             }
         }
+        public async Task<Diary> Update(Diary Diary, FilterDefinition<Diary> Filter)
+        {
+            try
+            {
+                return await repository.UpdateAsync(Filter,Diary);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

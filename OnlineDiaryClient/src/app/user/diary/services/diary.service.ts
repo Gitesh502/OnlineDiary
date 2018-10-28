@@ -22,4 +22,10 @@ export class DiaryService {
   get(){
     return this.http.get(AppConfig.settings.apiServer.metadata+"diary/getByUserId",this.httpOptions);
   }
+  getByPage(pageNo:number){
+    return this.http.get(AppConfig.settings.apiServer.metadata+"diary/getByPage?pageNo="+pageNo,this.httpOptions);
+  }
+  update(diary:any){
+    return this.http.post(AppConfig.settings.apiServer.metadata+"diary/update",JSON.stringify(diary),this.httpOptions);
+  }
 }

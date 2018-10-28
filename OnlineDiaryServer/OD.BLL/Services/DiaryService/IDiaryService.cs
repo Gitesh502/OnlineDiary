@@ -10,5 +10,8 @@ namespace OD.BLL.Services
     {
         Task<bool> AddDiary(Diary Diary);
         Task<List<Diary>> GetByUserId(string UserId);
+        Task<Diary> GetByPage(int PageNo,string UserId);
+        Task<Diary> UpdateDiary(Diary Diary);
+
     }
 }

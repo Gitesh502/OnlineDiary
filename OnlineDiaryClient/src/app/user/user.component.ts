@@ -64,11 +64,11 @@ export class UserComponent implements OnInit {
         children: [
           {
             title: 'Add',
-            link: []
+            link: ['task/add']
           },
           {
             title: 'View',
-            link: []
+            link: ['task/view']
           }
         ]
       },

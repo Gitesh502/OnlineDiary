@@ -36,6 +36,12 @@ namespace OD.Repository
             return entity;
         }
 
+        public virtual async Task<TEntity> UpdateAsync(FilterDefinition<TEntity> Filter,
+            TEntity entity)
+        {
+            return await Collection.FindOneAndReplaceAsync(Filter, entity);
+        }
+
         //public virtual async Task<TEntity> ReplaceAsync(TEntity entity)
         //{
         //    if (string.IsNullOrWhiteSpace(entity.Id))

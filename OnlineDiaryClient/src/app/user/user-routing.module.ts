@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user.component';
 import { AuthGuard } from '../guards/auth.guard';
-import { DiaryComponent } from './diary/diary.component';
 
 const routes: Routes = [
   {
@@ -19,6 +18,11 @@ const routes: Routes = [
       {
         path: 'diary',
         loadChildren: './diary/diary.module#DiaryModule',
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'task',
+        loadChildren: './task/task.module#TaskModule',
         canActivate: [AuthGuard]
       },
       {

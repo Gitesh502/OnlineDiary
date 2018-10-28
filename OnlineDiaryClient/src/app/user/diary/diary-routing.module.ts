@@ -16,6 +16,10 @@ const routes: Routes = [
       {
         path:'view',
         component:ViewComponent
+      },
+      {
+        path:'add/:pageno',
+        component:AddComponent
       }
     ]
   }

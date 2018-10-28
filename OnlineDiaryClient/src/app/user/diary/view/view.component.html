@@ -6,8 +6,12 @@
               <ng-container [ngSwitch]="utility.diaryViewType">
                 <ng-container *ngSwitchCase="'Grid'">
                     <ng-container *ngFor="let diary of dairiesList" >
-                        <div class="card-holder">
-                          <div class="instructions paper" (click)="showBook()">
+                        <div class="card-holder" >
+                        
+                          <div class="instructions paper">
+                              <span class="edit">
+                                <a  [routerLink]="['/user/diary/add', diary.pageNo]"><i class="far fa-edit"></i></a>
+                              </span>
                             <div class="header">
                               {{diary.createdOn | date:'MMM d y'}}
                             </div>

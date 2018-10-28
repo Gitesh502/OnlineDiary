@@ -3,6 +3,7 @@ import { Diary } from '../../models/index';
 import { EditorComponent } from 'src/app/shared/editor/editor.component';
 import { DiaryService } from '../services/diary.service';
 import { MessageService } from 'src/app/shared/services/message/message.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -12,44 +13,92 @@ import { MessageService } from 'src/app/shared/services/message/message.service'
 })
 export class AddComponent implements OnInit {
   @ViewChild(EditorComponent)
-  private editor:EditorComponent;
+  private editor: EditorComponent;
   public editorValue: string = '';
-  diary:Diary;
+  diary: Diary;
   editorSettings: any = {};
-  submitted:boolean=false;
+  submitted: boolean = false;
+  id: number;
   constructor(
-    private diaryService:DiaryService,
-    private msg: MessageService
-    ) { 
-    this.diary=new Diary();
+    private diaryService: DiaryService,
+    public msg: MessageService,
+    private route: ActivatedRoute,
+    private router: Router
+
+  ) {
+    this.diary = new Diary();
   }
 
   ngOnInit() {
+    this.msg.reset();
+    this.route.params.subscribe(params => {
+      this.id = +params['pageno']; // (+) converts string 'id' to a number
+      // In a real app: dispatch action to load the details here.
+      if(this.id>0){
+      this.getDiary(this.id);
+      }
+    });
   }
 
-  addDiary(){
-    this.submitted=true;
-    console.log(this.editor);
+  getDiary(pageNo) {
+    this.msg.setLoading(true);
+    this.diaryService.getByPage(pageNo)
+      .subscribe((data: any) => {
+        if (data.valid) {
+          this.diary = data.response;
+          this.editor.setEditor(data.response.body);
+          this.msg.setLoading(false);
+        }
+        else {
+          this.msg.toastr('E', data.msg, 'Error');
+        }
+      }, err => {
+        this.msg.toastr('E', err.msg, 'Error');
+      })
+  }
+
+  addDiary() {
+    this.submitted = true;
     this.diary.body = this.editor.getEditorBody();
     this.diaryService.add(this.diary)
-    .subscribe((data:any)=>{
-      this.submitted=false;
-      if(data.valid){
-        this.resetForm()
-        this.msg.toastr('S',data.msg,'Success');
-      }
-      else{
-        this.msg.toastr('E',data.msg,'Error');
-      }
-    },err=>{
-      this.msg.toastr('E',err.msg,'Error');
-    })
+      .subscribe((data: any) => {
+        this.submitted = false;
+        if (data.valid) {
+          this.resetForm()
+          this.msg.toastr('S', data.msg, 'Success');
+        }
+        else {
+          if (data.type == "alert") {
+            this.msg.show(false, "You can edit existing and update!");
+          }
+          this.msg.toastr('E', data.msg, 'Error');
+        }
+      }, err => {
+        this.msg.toastr('E', err.msg, 'Error');
+      })
   }
 
-  resetForm(){
-    this.diary=new Diary();
+  updateDiary(){
+    this.submitted = true;
+    this.diary.body = this.editor.getEditorBody();
+    this.diaryService.update(this.diary)
+      .subscribe((data: any) => {
+        this.submitted = false;
+        if (data.valid) {
+          this.resetForm()
+          this.msg.toastr('S', data.msg, 'Success');
+          this.router.navigate(['/user/diary/view']);
+        }
+        else {
+          this.msg.toastr('E', data.msg, 'Error');
+        }
+      }, err => {
+        this.msg.toastr('E', err.msg, 'Error');
+      })
+  }
+
+  resetForm() {
+    this.diary = new Diary();
     this.editor.clear();
-    
   }
-
 }

@@ -10,7 +10,7 @@
 
 <nb-alert *ngIf="messageService.get().valid == true && messageService.get().messages?.length && messageService.get().display==true"
   outline="success" role="alert">
-  <p class="alert-title"><b>Hooray!</b></p>
+  <p class="alert-title"><b>Success!</b></p>
   <ul class="alert-message-list">
     <li *ngFor="let message of messageService.get().messages" class="alert-message">{{ message }}</li>
   </ul>

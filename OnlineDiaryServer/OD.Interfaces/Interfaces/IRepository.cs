@@ -15,5 +15,7 @@ namespace OD.Interfaces
         Task<TEntity> GetOneAsync(FilterDefinition<TEntity> Filter);
 
         Task<TEntity> SaveAsync(TEntity entity);
+
+        Task<TEntity> UpdateAsync(FilterDefinition<TEntity> Filter, TEntity entity);
     }
 }

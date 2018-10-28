@@ -25,7 +25,7 @@ export class ViewComponent implements OnInit {
       },
       createdOn: {
         title: 'Created On'
-      }
+      },
     },
     actions: {
       add: false,
@@ -91,5 +91,7 @@ export class ViewComponent implements OnInit {
   closeModal(id: string) {
     this.modalService.close(id);
   }
+
+  
 
 }

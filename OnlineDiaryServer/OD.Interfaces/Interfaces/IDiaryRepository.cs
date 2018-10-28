@@ -11,5 +11,6 @@ namespace OD.Interfaces.Interfaces
     {
         Task<bool> Add(Diary Diary);
         Task<List<Diary>> Find(FilterDefinition<Diary> Filter);
+        Task<Diary> Update(Diary Diary, FilterDefinition<Diary> Filter);
     }
 }
