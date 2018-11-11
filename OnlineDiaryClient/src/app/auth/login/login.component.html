@@ -31,12 +31,14 @@
       aria-disabled="true" tabindex="-1"> Sign In </button>
   </form>
   <div class="links">
+    <div class="external-login hide">
     <small class="form-text">Or connect with:</small>
     <div class="socials">
       <a href="https://github.com/akveo/nebular" target="_blank" class="socicon-github with-icon"></a>
       <a href="https://www.facebook.com/akveo/" target="_blank" class="socicon-facebook with-icon"></a>
       <a href="https://twitter.com/akveo_inc" target="_blank" class="socicon-twitter with-icon"></a>
     </div>
+  </div>
     <small class="form-text"> Don't have an account?
       <a [routerLink]="['/auth/register']" routerLinkActive="active"><strong>Sign Up</strong></a></small>
   </div>

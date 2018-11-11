@@ -1,4 +1,4 @@
-<nb-layout restoreScrollTop="true">
+<nb-layout restoreScrollTop="true" withScroll="true">
     <nb-layout-header fixed>
         <div class="header-container left">
             <div class="logo-containter" style="display:flex">
@@ -14,9 +14,11 @@
                     <nb-user [nbContextMenu]="contextTtems" nbContextMenuTag="my-context-menu" [name]="getUser().fullName"></nb-user>
                 </nb-action>
             </nb-actions>
+            <button nbButton status="info" size="xsmall" (click)="toggleCompact()">Toggle Compact</button>
+
         </div>
     </nb-layout-header>
-    <nb-layout-header subheader>
+    <nb-layout-header subheader >
         <div class="c-subheader left">
             <nb-actions>
                 <nb-action icon="nb-home"></nb-action>
@@ -34,7 +36,7 @@
 
 
     </nb-layout-header>
-    <nb-sidebar containerFixed="true">
+    <nb-sidebar containerFixed="true" tag="left">
         <div class="main-container">
             <nb-sidebar-header _ngcontent-c0="" class="ng-star-inserted"><a _ngcontent-c0="" class="btn btn-hero-success main-btn"
                     href="https://github.com/akveo/nebular" target="_blank"><i _ngcontent-c0="" class="ion ion-social-github"></i><span
@@ -43,7 +45,14 @@
             </nb-menu>
         </div>
     </nb-sidebar>
+    <nb-sidebar right tag="right" state="compacted"></nb-sidebar>
+
     <nb-layout-column>
-        <router-outlet></router-outlet>
+        <div class="container-fluid">
+                <router-outlet></router-outlet>
+
+        </div>
     </nb-layout-column>
+    <nb-layout-footer>Contact us</nb-layout-footer>
+
 </nb-layout>

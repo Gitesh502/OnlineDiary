@@ -37,7 +37,7 @@ export class UserComponent implements OnInit {
 
   }
   toggle() {
-    this.sidebarService.toggle(true);
+    this.sidebarService.toggle(true,'left');
     return false;
   }
   initMenu() {
@@ -103,5 +103,9 @@ export class UserComponent implements OnInit {
 
   getUrl(): string {
     return this.router.url;
+  }
+
+  toggleCompact() {
+    this.sidebarService.toggle(true, 'right');
   }
 }

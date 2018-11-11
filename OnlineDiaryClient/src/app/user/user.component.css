@@ -72,6 +72,21 @@
     color: #40dc7e;
   }
 
-  ::ng-deep .nb-theme-default nb-card{
+  /* ::ng-deep .nb-theme-default nb-card{
     height:calc(100vh - 2 * 7.00rem)
+} */
+::ng-deep .nb-theme-default nb-sidebar{
+  width: 12rem;
+}
+::ng-deep .nb-theme-default nb-sidebar.expanded{
+  width:12rem;
+}
+
+::ng-deep .nb-theme-default nb-sidebar .main-container{
+  width:12rem;
+
+}
+
+::ng-deep .nb-theme-default nb-layout .layout .layout-container .content .columns nb-layout-column{
+  padding:1.25rem 1.25rem 0.75rem;
 }

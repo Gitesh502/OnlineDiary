@@ -75,13 +75,16 @@
       Register
     </button>
   </form>
-  <div class="links">
-    <small class="form-text">Or connect with:</small>
-    <div class="socials">
-      <a href="https://github.com/akveo/nebular" target="_blank" class="socicon-github with-icon"></a>
-      <a href="https://www.facebook.com/akveo/" target="_blank" class="socicon-facebook with-icon"></a>
-      <a href="https://twitter.com/akveo_inc" target="_blank" class="socicon-twitter with-icon"></a>
-    </div>
+  <div class="links"> 
+     <div class="external-login hide">
+      <small class="form-text">Or connect with:</small>
+      <div class="socials">
+        <a href="https://github.com/akveo/nebular" target="_blank" class="socicon-github with-icon"></a>
+        <a href="https://www.facebook.com/akveo/" target="_blank" class="socicon-facebook with-icon"></a>
+        <a href="https://twitter.com/akveo_inc" target="_blank" class="socicon-twitter with-icon"></a>
+      </div>
+  </div>
+
     <small class="form-text"> Already have an account?
       <a [routerLink]="['/auth/login']" routerLinkActive="active"><strong>Sign In</strong></a></small>
   </div>

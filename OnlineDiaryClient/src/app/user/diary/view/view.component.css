@@ -1,8 +1,10 @@
+* {box-sizing: border-box;}
+
 .instructions {
 	font: 16px 'AmericanTypewriter', Cambria, Georgia;
 	color: #282625;
 	margin-top: 0;
-	width: 274px;
+	width: 100%;
 	display: inline-grid;
 	margin-right:10px;
 	margin-bottom: 10px;
@@ -62,8 +64,7 @@
 .card-holder {
 	position: relative;
 	display: block;
-	float: left;
-	margin: 0 20px 20px 0;
+	margin: 0 10px 20px 10px;
 	-moz-transition: all 0.85s ease;
 	-o-transition: all 0.85s ease;
 	-webkit-transition: all 0.85s ease;
@@ -115,22 +116,17 @@
 	transition: inherit;
 }
 .c-row {
-	display: block;
-	width: auto;
-	background-color: #fafafa;
-	padding: 20px 20px;
-	margin: 20px;
-	overflow: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
 }
-.c-row .inner {
-	margin: 20px auto;
-}
+
 ::ng-deep .nb-theme-default ng2-smart-table .ng2-smart-actions a.ng2-smart-action{
 	font-size: inherit !important;
 }
 
 .edit{
-	position: relative;
-    top: -35px;
-    left: 195px;
+	position: fixed;
+	right: 5px;
+	top:5px;
 }

@@ -18,7 +18,7 @@ export class AddComponent implements OnInit {
   diary: Diary;
   editorSettings: any = {};
   submitted: boolean = false;
-  id: number;
+  id: number = 0;
   constructor(
     private diaryService: DiaryService,
     public msg: MessageService,
@@ -27,17 +27,24 @@ export class AddComponent implements OnInit {
 
   ) {
     this.diary = new Diary();
+    this.initvalues();
   }
 
   ngOnInit() {
     this.msg.reset();
     this.route.params.subscribe(params => {
       this.id = +params['pageno']; // (+) converts string 'id' to a number
-      // In a real app: dispatch action to load the details here.
-      if(this.id>0){
-      this.getDiary(this.id);
+      if (this.id > 0 && !Number.isNaN(this.id)) {
+        this.getDiary(this.id);
+      }
+      else {
+        this.id = 0;
       }
     });
+  }
+
+  initvalues(){
+    this.diary.createdOn = new Date();
   }
 
   getDiary(pageNo) {
@@ -78,7 +85,7 @@ export class AddComponent implements OnInit {
       })
   }
 
-  updateDiary(){
+  updateDiary() {
     this.submitted = true;
     this.diary.body = this.editor.getEditorBody();
     this.diaryService.update(this.diary)
@@ -100,5 +107,11 @@ export class AddComponent implements OnInit {
   resetForm() {
     this.diary = new Diary();
     this.editor.clear();
+    this.msg.reset();
+    this.initvalues();
+  }
+
+  reset(){
+    this.resetForm();
   }
 }

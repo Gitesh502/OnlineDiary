@@ -9,11 +9,13 @@
     <nb-card-body>
         <form #form="ngForm" autocomplete="off">
             <div class="form-group">
-                <input fullwidth id="diaryTitle" [(ngModel)]="diary.title" name="diaryTitle" nbinput placeholder="Title (If not given, your title will be Page No)"
+                <input fullwidth id="diaryTitle" [(ngModel)]="diary.title" name="diaryTitle" nbinput placeholder="Title"
                     class="input-full-width input-md input-rectangle">
             </div>
             <div class="form-group c-datepicker">
-                <input [(ngModel)]="diary.createdOn" [disabled]="id>0" [readonly]="id>0" name="diaryDate" [nbDatepicker]="datepicker" nbInput placeholder="Pick Date"
+                <input [(ngModel)]="diary.createdOn" [disabled]="id>0" [readonly]="id>0"
+                 name="diaryDate" [nbDatepicker]="datepicker" nbInput 
+                 placeholder="Pick Date"
                     fullwidth required>
                 <nb-datepicker #datepicker></nb-datepicker>
             </div>
@@ -34,7 +36,7 @@
             [class.btn-pulse]="submitted">
             Update Diary
         </button>
-            <button nbButton status="danger">
+            <button nbButton status="danger" (click)="reset()">
                 Reset
             </button>
         </div>

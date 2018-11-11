@@ -1,3 +1,67 @@
-<p>
-  add works!
-</p>
+<alert-message></alert-message>
+<nb-card [nbSpinner]="msg.loading" nbSpinnerStatus="success">
+    <nb-card-header>
+        <div class="c-task-title">
+            <span *ngIf="id <= 0"> Add Task</span>
+            <span *ngIf="id>0"> Update Task</span>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+        <form #form="ngForm" autocomplete="off">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input fullwidth id="taskTitle" [(ngModel)]="task.title" name="taskTitle" nbinput placeholder="Title"
+                            class="input-full-width input-md input-rectangle">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <!-- <input fullwidth id="taskTags" [(ngModel)]="task.tags" name="taskTags" nbinput placeholder="Tags"
+                            class="input-full-width input-md input-rectangle"> -->
+                        <ng-select [items]="tags" [addTag]="addTag" [hideSelected]="true" multiple="true" bindLabel="name"
+                            [(ngModel)]="task.tags" class="input-full-width input-md input-rectangle">
+                        </ng-select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group c-datepicker">
+                        <input [(ngModel)]="task.startDate" name="taskStartDate" [nbDatepicker]="startdatepicker" nbInput
+                            placeholder="Start Date" fullwidth required>
+                        <nb-datepicker #startdatepicker></nb-datepicker>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group c-datepicker">
+                        <input [(ngModel)]="task.endDate" name="taskEndDate" [nbDatepicker]="enddatepicker" nbInput
+                            placeholder="End Date" fullwidth required>
+                        <nb-datepicker #enddatepicker></nb-datepicker>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <app-editor></app-editor>
+            </div>
+
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <div class="c-diary-actions">
+            <button *ngIf="id <= 0" nbButton status="success" (click)="addDiary();submitted=true" [disabled]="submitted || !form.valid"
+                [class.btn-pulse]="submitted">
+                Save Task
+            </button>
+            <button *ngIf="id>0" nbButton status="success" (click)="updateDiary();submitted=true" [disabled]="submitted || !form.valid"
+                [class.btn-pulse]="submitted">
+                Update Task
+            </button>
+            <button nbButton status="danger" (click)="reset()">
+                Reset
+            </button>
+        </div>
+    </nb-card-footer>
+</nb-card>
