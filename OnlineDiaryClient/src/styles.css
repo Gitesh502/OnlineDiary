@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@ng-select/ng-select/themes/default.theme.css";
-
+@import "node_modules/angular-calendar/css/angular-calendar.css";
 .right{
 float:right;
 }
@@ -24,4 +24,13 @@ jw-modal {
 
 .hide{
     display: none !important;
+}
+
+.nb-theme-default [nbInput].input-md{
+    padding-top:0.60rem !important;
+    padding-bottom: 0.60rem !important;
+}
+
+input{
+    line-height: 2px !important;
 }

@@ -1,6 +1,6 @@
 export class Task{
     title:string="";
-    tags:string="";
+    tags:any=[];
     startDate:Date=null;
     endDate:Date=null;
     description:string="";

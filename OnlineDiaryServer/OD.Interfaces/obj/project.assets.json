@@ -1551,11 +1551,10 @@
   },
   "libraries": {
     "DnsClient/1.0.7": {
-      "sha512": "i6Imdyz+dvljMtQh1QtjMzguLEFFJCilecHiaRPIbNX4gK3zluf/3OQWD1XbVy5PXf1u394x5ImB+uu7DNMS1w==",
+      "sha512": "f3k5ufhUSL658fy/ac1mReqRIr0jGMyOJFvBqJ+7cASq01NIysYbrrRDjboYKAGrd0Y2mc1A749uQvT8vAA91A==",
       "type": "package",
       "path": "dnsclient/1.0.7",
       "files": [
-        ".signature.p7s",
         "dnsclient.1.0.7.nupkg.sha512",
         "dnsclient.nuspec",
         "lib/net45/DnsClient.dll",
@@ -1965,11 +1964,10 @@
       ]
     },
     "MongoDB.Bson/2.7.0": {
-      "sha512": "BBPKyeYmhRduXuDQsFvB2bw34rAqJrT9UZPHAVLGLtvp5wYxhzP8r7SrSn//f91Xst09Ww/5lq3DD5byn0fdLw==",
+      "sha512": "vzpTDHYX/X6gF9qtDuKRJiLkqpj5OZuT1bIzJCiBiU8CwJ37becYmaXuy/QSuWnYN6j6ZdVTWILKbWt2MXL8DA==",
       "type": "package",
       "path": "mongodb.bson/2.7.0",
       "files": [
-        ".signature.p7s",
         "License.rtf",
         "lib/net45/MongoDB.Bson.dll",
         "lib/net45/MongoDB.Bson.xml",
@@ -1980,11 +1978,10 @@
       ]
     },
     "MongoDB.Driver/2.7.0": {
-      "sha512": "HcifZthdICkC5oXnIrxH8TJTDc8JMym+X1NR/oJjcDm841fkvSvg1MEL8LNu/FLlwQQq3XxtrxKGDvTT/z1RmA==",
+      "sha512": "5wP5BBwm5YO6h2Vhw6zQmOwSW9WP2d6kgRM6E7uIbwIJz4+j2trS2Wo7/+IYow5WVN8Jd6O27bIB/4gKNepO1Q==",
       "type": "package",
       "path": "mongodb.driver/2.7.0",
       "files": [
-        ".signature.p7s",
         "License.rtf",
         "lib/net45/MongoDB.Driver.dll",
         "lib/net45/MongoDB.Driver.xml",
@@ -1995,11 +1992,10 @@
       ]
     },
     "MongoDB.Driver.Core/2.7.0": {
-      "sha512": "oPlQUCdysl9AL9TlTDsadrjWbiZDSbl6N4AGAe04gY2qYsJ9r7Pu5+TvFf7epAl3tOt6art3/maOhg7KL2vDng==",
+      "sha512": "SepB4KT+zXA3iFaIFwXVKmk6BZIp0EGE/iWqNbDZ1mca9e8EhtqYPwOOzFmEbdKAzmVvF1y86kNI4agWP6I5sg==",
       "type": "package",
       "path": "mongodb.driver.core/2.7.0",
       "files": [
-        ".signature.p7s",
         "License.rtf",
         "lib/net45/MongoDB.Driver.Core.dll",
         "lib/net45/MongoDB.Driver.Core.xml",
@@ -2161,11 +2157,10 @@
       ]
     },
     "runtime.native.System.Net.Security/4.0.1": {
-      "sha512": "OpQmF7Ol4t3BVl+x2SURhymksME8f9Ke4uKWAVKPZhGZn6g5bBKvaSllV4nmNKgNQSIhM1x4IOtgc6/32H1OUg==",
+      "sha512": "Az6Ff6rZFb8nYGAaejFR6jr8ktt9f3e1Q/yKdw0pwHNTLaO/1eCAC9vzBoR9YAb0QeZD6fZXl1A9tRB5stpzXA==",
       "type": "package",
       "path": "runtime.native.system.net.security/4.0.1",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -3409,11 +3404,10 @@
       ]
     },
     "System.Net.NetworkInformation/4.3.0": {
-      "sha512": "MKLDZXuBZOS348egaxkMgwSUHIIhykVf0pudpfSdzjKmkRpVCzqkpysPHHp8HfckYAhuXRM+UgxWPgFTHF8Trg==",
+      "sha512": "zNVmWVry0pAu7lcrRBhwwU96WUdbsrGL3azyzsbXmVNptae1+Za+UgOe9Z6s8iaWhPn7/l4wQqhC56HZWq7tkg==",
       "type": "package",
       "path": "system.net.networkinformation/4.3.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3560,11 +3554,10 @@
       ]
     },
     "System.Net.Security/4.0.0": {
-      "sha512": "iavC4j5XrRyX3aXbn23jHHF0NTxw9F+2vi3a94VY4BgfrYm5VQBh8OzU1TkNahTSlcKzjGhEc7ZfTfe4b62J6Q==",
+      "sha512": "uM1JaYJciCc2w7efD6du0EpQ1n5ZQqE6/P43/aI4H5E59qvP+wt3l70KIUF/Ha7NaeXGoGNFPVO0MB80pVHk2g==",
       "type": "package",
       "path": "system.net.security/4.0.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4826,11 +4819,10 @@
       ]
     },
     "System.Security.SecureString/4.0.0": {
-      "sha512": "7TGOnj9Lr8ljCJbMHjZC34hEw3Z+zRPp7eNhLBg22mbSqO8gQMGLJ/vQkWv8HFYG0t2i53ZulKZ8NNho+jVK7Q==",
+      "sha512": "sqzq9GD6/b0yqPuMpgIKBuoLf4VKAj8oAfh4kXSzPaN6eoKY3hRi9C5L27uip25qlU+BGPfb0xh2Rmbwc4jFVA==",
       "type": "package",
       "path": "system.security.securestring/4.0.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5067,11 +5059,10 @@
       ]
     },
     "System.Threading.Overlapped/4.3.0": {
-      "sha512": "JpukcZA7kre2gQ7GrhtvZu1xv/LVEG5HV9AajQ3XV7l36T6ICalw/llfkBHeK/eqo8UWpMNqkWGCzzlSuqE6pg==",
+      "sha512": "m3HQ2dPiX/DSTpf+yJt8B0c+SRvzfqAJKx+QDWi+VLhz8svLT23MVjEOHPF/KiSLeArKU/iHescrbLd3yVgyNg==",
       "type": "package",
       "path": "system.threading.overlapped/4.3.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net46/System.Threading.Overlapped.dll",
@@ -5251,37 +5242,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GEETESH\\.nuget\\packages\\": {},
+    "C:\\Users\\Raju\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Projects\\OnlineDiary\\OnlineDiaryServer\\OD.Interfaces\\OD.Interfaces.csproj",
+      "projectUniqueName": "D:\\Raju WorkSpace\\Projects\\ASP.NET & CORE\\OnlineDiary\\OnlineDiaryServer\\OD.Interfaces\\OD.Interfaces.csproj",
       "projectName": "OD.Interfaces",
-      "projectPath": "F:\\Projects\\OnlineDiary\\OnlineDiaryServer\\OD.Interfaces\\OD.Interfaces.csproj",
-      "packagesPath": "C:\\Users\\GEETESH\\.nuget\\packages\\",
-      "outputPath": "F:\\Projects\\OnlineDiary\\OnlineDiaryServer\\OD.Interfaces\\obj\\",
+      "projectPath": "D:\\Raju WorkSpace\\Projects\\ASP.NET & CORE\\OnlineDiary\\OnlineDiaryServer\\OD.Interfaces\\OD.Interfaces.csproj",
+      "packagesPath": "C:\\Users\\Raju\\.nuget\\packages\\",
+      "outputPath": "D:\\Raju WorkSpace\\Projects\\ASP.NET & CORE\\OnlineDiary\\OnlineDiaryServer\\OD.Interfaces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\GEETESH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Raju\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "F:\\Projects\\OnlineDiary\\OnlineDiaryServer\\OD.Entities\\OD.Entities.csproj": {
-              "projectPath": "F:\\Projects\\OnlineDiary\\OnlineDiaryServer\\OD.Entities\\OD.Entities.csproj"
+            "D:\\Raju WorkSpace\\Projects\\ASP.NET & CORE\\OnlineDiary\\OnlineDiaryServer\\OD.Entities\\OD.Entities.csproj": {
+              "projectPath": "D:\\Raju WorkSpace\\Projects\\ASP.NET & CORE\\OnlineDiary\\OnlineDiaryServer\\OD.Entities\\OD.Entities.csproj"
             }
           }
         }

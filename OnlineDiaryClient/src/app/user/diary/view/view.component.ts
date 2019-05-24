@@ -14,7 +14,7 @@ import { BookComponent } from 'src/app/shared/book/book.component';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements OnInit {
-  @ViewChild(BookComponent) book:BookComponent;
+  @ViewChild(BookComponent) book: BookComponent;
   settings = {
     columns: {
       title: {
@@ -34,7 +34,7 @@ export class ViewComponent implements OnInit {
   };
   isBookView: boolean = false;
   tableData: LocalDataSource = new LocalDataSource();
-
+  columns:any=[];
 
   constructor(
     private diaryService: DiaryService,
@@ -45,7 +45,17 @@ export class ViewComponent implements OnInit {
   ) { }
   dairiesList: any[] = [];
   ngOnInit() {
-    this.get();
+    this.initColumns();
+     this.get();
+  }
+
+  initColumns(){
+    this.columns=[
+      {field:'title',header:'Title'},
+      {field:'pageNo',header:'Page No'},
+      {field:'createdOn',header:'Created On',format:'datetime'},
+      {field:'',header:'Actions',format:'html'},
+    ]
   }
 
   initDiaryList() {
@@ -53,29 +63,28 @@ export class ViewComponent implements OnInit {
   }
   get() {
     this.msgService.setLoading(true);
-    this.diaryService.get()
-      .subscribe((data: any) => {
-        if (data.valid) {
-          data.response.forEach(element => {
-            this.dairiesList.push({
-              id: element.id,
-              title: element.title,
-              createdOn: this.datePipe.transform(element.createdOn, 'MMM d y'),
-              body: element.body,
-              pageNo: element.pageNo
+    this.diaryService.get().subscribe((data: any) => {
+      if (data.valid) {
+        data.response.forEach(element => {
+          this.dairiesList.push({
+            id: element.id,
+            title: element.title,
+            createdOn: this.datePipe.transform(element.createdOn, 'MMM d y'),
+            body: element.body,
+            pageNo: element.pageNo
 
-            });
           });
-          this.tableData.load(this.dairiesList);
-        }
-        else {
-          this.msgService.show(false, data.msg);
-        }
-          this.msgService.setLoading(false);
-      },err=>{
-          this.msgService.setLoading(false);
-        this.msgService.show(false, "Error Occured");
-      })
+        });
+        this.tableData.load(this.dairiesList);
+      }
+      else {
+        this.msgService.show(false, data.msg);
+      }
+      this.msgService.setLoading(false);
+    }, err => {
+      this.msgService.setLoading(false);
+      this.msgService.show(false, "Error Occured");
+    })
   }
 
   showBook() {
@@ -92,6 +101,6 @@ export class ViewComponent implements OnInit {
     this.modalService.close(id);
   }
 
-  
+
 
 }

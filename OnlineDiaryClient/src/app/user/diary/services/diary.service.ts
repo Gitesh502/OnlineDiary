@@ -10,7 +10,6 @@ export class DiaryService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': 'my-auth-token'
     })
   };
   constructor(private http: HttpClient) {
@@ -19,7 +18,7 @@ export class DiaryService {
   add(diary:any){
     return this.http.post(AppConfig.settings.apiServer.metadata+"diary/save",JSON.stringify(diary),this.httpOptions);
   }
-  get(){
+  get():any{
     return this.http.get(AppConfig.settings.apiServer.metadata+"diary/getByUserId",this.httpOptions);
   }
   getByPage(pageNo:number){

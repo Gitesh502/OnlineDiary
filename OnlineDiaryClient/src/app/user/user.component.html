@@ -11,14 +11,15 @@
             <nb-actions size="medium" class="right nb-action-menu">
                 <nb-action icon="nb-gear" class="toggle-layout"></nb-action>
                 <nb-action class="ng-star-inserted">
-                    <nb-user [nbContextMenu]="contextTtems" nbContextMenuTag="my-context-menu" [name]="getUser().fullName"></nb-user>
+                    <nb-user [nbContextMenu]="contextTtems" nbContextMenuTag="my-context-menu"
+                        [name]="getUser()?.fullName"></nb-user>
                 </nb-action>
             </nb-actions>
             <button nbButton status="info" size="xsmall" (click)="toggleCompact()">Toggle Compact</button>
 
         </div>
     </nb-layout-header>
-    <nb-layout-header subheader >
+    <nb-layout-header subheader>
         <div class="c-subheader left">
             <nb-actions>
                 <nb-action icon="nb-home"></nb-action>
@@ -28,9 +29,11 @@
         </div>
         <div class="c-subheader right" *ngIf="showMenuOpts('diaryListView')">
             <nb-actions>
-                <nb-action  [className]="utility.diaryViewType=='List'?'fas fa-list-ul active':'fas fa-list-ul'"  (click)="toggleView('List')">
+                <nb-action [className]="utility.diaryViewType=='List'?'fas fa-list-ul active':'fas fa-list-ul'"
+                    (click)="toggleView('List')">
                 </nb-action>
-                <nb-action  [className]="utility.diaryViewType=='Grid'?'fas fa-th-large active':'fas fa-th-large'" (click)="toggleView('Grid')"></nb-action>
+                <nb-action [className]="utility.diaryViewType=='Grid'?'fas fa-th-large active':'fas fa-th-large'"
+                    (click)="toggleView('Grid')"></nb-action>
             </nb-actions>
         </div>
 
@@ -38,9 +41,8 @@
     </nb-layout-header>
     <nb-sidebar containerFixed="true" tag="left">
         <div class="main-container">
-            <nb-sidebar-header _ngcontent-c0="" class="ng-star-inserted"><a _ngcontent-c0="" class="btn btn-hero-success main-btn"
-                    href="https://github.com/akveo/nebular" target="_blank"><i _ngcontent-c0="" class="ion ion-social-github"></i><span
-                        _ngcontent-c0="">Support Us</span></a></nb-sidebar-header>
+            <nb-sidebar-header class="ng-star-inserted"><a class="btn btn-hero-success main-btn"
+                    [routerLink]="['/user/dashboard']"><span>Home</span></a></nb-sidebar-header>
             <nb-menu [items]="items">
             </nb-menu>
         </div>
@@ -49,7 +51,7 @@
 
     <nb-layout-column>
         <div class="container-fluid">
-                <router-outlet></router-outlet>
+            <router-outlet></router-outlet>
 
         </div>
     </nb-layout-column>

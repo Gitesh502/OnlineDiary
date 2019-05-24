@@ -1,12 +1,3 @@
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.deps.json
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.dll
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.csprojAssemblyReference.cache
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.csproj.CoreCompileInputs.cache
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfoInputs.cache
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfo.cs
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.pdb
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.dll
-D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.pdb
 F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.csproj.CoreCompileInputs.cache
 F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfoInputs.cache
 F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfo.cs
@@ -15,3 +6,21 @@ F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD
 F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.deps.json
 F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.dll
 F:\Projects\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.deps.json
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.csprojAssemblyReference.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.csproj.CoreCompileInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfoInputs.cache
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfo.cs
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Gitesh WrokSpace\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.deps.json
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\bin\Debug\netcoreapp2.1\OD.Entities.pdb
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.csprojAssemblyReference.cache
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.csproj.CoreCompileInputs.cache
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfoInputs.cache
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.AssemblyInfo.cs
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.dll
+D:\Raju WorkSpace\Projects\ASP.NET & CORE\OnlineDiary\OnlineDiaryServer\OD.Entities\obj\Debug\netcoreapp2.1\OD.Entities.pdb

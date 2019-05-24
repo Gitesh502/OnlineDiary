@@ -1,9 +1,9 @@
 <nb-card [nbSpinner]="msgService.loading" nbSpinnerStatus="success">
   <nb-card-body>
-    <div class="c-row">
-      <ng-container *ngIf="dairiesList && dairiesList.length>0;else noDiaries">
-        <ng-container [ngSwitch]="utility.diaryViewType">
-          <ng-container *ngSwitchCase="'Grid'">
+    <ng-container *ngIf="dairiesList && dairiesList.length>0;else noDiaries">
+      <ng-container [ngSwitch]="utility.diaryViewType">
+        <ng-container *ngSwitchCase="'Grid'">
+          <div class="c-row">
             <ng-container *ngFor="let diary of dairiesList">
               <div class="c-col col-xs-12">
                 <div class="card-holder">
@@ -12,7 +12,7 @@
                       <a [routerLink]="['/user/diary/add', diary.pageNo]"><i class="far fa-edit"></i></a>
                     </span>
                     <div class="header">
-                      {{diary.createdOn | date:'MMM d y'}}
+                      {{diary.createdOn | date:'MMM dd, yyyy'}}
                     </div>
                     <p>
                       {{diary.title}}
@@ -21,16 +21,46 @@
                 </div>
               </div>
             </ng-container>
-          </ng-container>
-          <ng-container *ngSwitchCase="'List'">
-            <ng2-smart-table [settings]="settings" [source]="tableData"></ng2-smart-table>
-          </ng-container>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'List'">
+          <!-- <ng2-smart-table [settings]="settings" [source]="tableData"></ng2-smart-table> -->
+          <table id="ntable">
+            <thead>
+              <ng-container *ngFor="let col of columns">
+                <th>{{col.header}}</th>
+              </ng-container>
+            </thead>
+            <tbody>
+              <ng-container *ngFor="let diary of dairiesList">
+                <tr>
+                  <ng-container *ngFor="let col of columns">
+                    <td>
+                      <ng-container [ngSwitch]="col.format">
+                        <ng-container *ngSwitchCase="'datetime'">
+                          {{diary[col.field] | date:'MMM dd, yyyy'}} 
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'html'">
+                            <a [routerLink]="['/user/diary/add', diary.pageNo]" nbButton status="success" size="xsmall">Edit</a>
+                            &nbsp;
+                            <a nbButton status="success" size="xsmall">View</a>
+                          </ng-container>
+                        <ng-container *ngSwitchDefault>
+                          {{diary[col.field]}}
+                        </ng-container>
+                      </ng-container>
+                    </td>
+                  </ng-container>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
         </ng-container>
       </ng-container>
-      <ng-template #noDiaries>
-        <alert-message></alert-message>
-      </ng-template>
-    </div>
+    </ng-container>
+    <ng-template #noDiaries>
+      <alert-message></alert-message>
+    </ng-template>
   </nb-card-body>
 </nb-card>
 <jw-modal id="c-book-view" class="c-imageUploader">

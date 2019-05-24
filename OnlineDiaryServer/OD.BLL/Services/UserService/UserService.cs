@@ -45,7 +45,7 @@ namespace OD.BLL.Services
             using (UnitOfWork db = new UnitOfWork())
             {
                 FilterDefinition<Users> filter =
-                    Builders<Users>.Filter.Eq("_id", Id);
+                    Builders<Users>.Filter.Eq("Id", Id);
                 var result =  db.Users.Find(filter).Result;
                 if (result != null)
                 {
@@ -54,5 +54,7 @@ namespace OD.BLL.Services
             }
             return null;
         }
+
+    
     }
 }

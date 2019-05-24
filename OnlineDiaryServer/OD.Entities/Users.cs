@@ -19,5 +19,8 @@ namespace OD.Entities
         public string PhoneNumber { get; set; }
         public string PasswordHash { get; set; }
         public string Salt { get; set; }
+        public bool? RememberMe { get; set; } = false;
+        public DateTime? RegisteredDate { get; set; } = DateTime.Now;
+        public bool? IsActive{get;set;}=true;
     }
 }

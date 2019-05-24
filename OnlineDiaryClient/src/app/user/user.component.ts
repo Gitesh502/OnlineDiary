@@ -75,7 +75,7 @@ export class UserComponent implements OnInit {
       {
         title: 'Logout',
         icon: 'fa fa-sign-out-alt',
-        link: [],
+        link: ['auth/login'],
       },
     ];
     this.contextTtems = [
@@ -85,7 +85,12 @@ export class UserComponent implements OnInit {
   }
 
   getUser(): any {
-    return this.storage.get('user').user;
+    if(this.storage.get('user')){
+      return this.storage.get('user').user 
+    }
+    else{
+    return null;
+    }
   }
 
   toggleView(view) {

@@ -15,5 +15,6 @@ namespace OD.Api.ApiModels.Request
         public string Password { get; set; }
         public string PasswordHash { get; set; }
         public string Salt { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

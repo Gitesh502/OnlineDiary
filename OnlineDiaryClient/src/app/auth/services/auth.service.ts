@@ -15,7 +15,6 @@ export class AuthService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': 'my-auth-token'
     })
   };
   constructor(private http: HttpClient,private storage:StorageService) {
@@ -30,6 +29,17 @@ export class AuthService {
   login(user:users):any{
     return this.http.post(AppConfig.settings.apiServer.metadata+"account/login",
     JSON.stringify(user),this.httpOptions)
+    .pipe(map((response: ResponseModel) => response));
+  }
+
+  refreshToken():any{
+    let storage = this.storage.get('user');
+    let req={
+      token:storage.token,
+      refreshToken:storage.user.refreshToken
+    }
+    return this.http.post(AppConfig.settings.apiServer.metadata+"account/refresh",
+    JSON.stringify(req),this.httpOptions)
     .pipe(map((response: ResponseModel) => response));
   }
 

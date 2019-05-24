@@ -5,6 +5,9 @@ import { UserComponent } from './user.component';
 import { Imports } from '../imports';
 import { DiaryModule } from 'src/app/user/diary/diary.module';
 import { TaskModule } from 'src/app/user/task/task.module';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
   imports: [
@@ -12,8 +15,11 @@ import { TaskModule } from 'src/app/user/task/task.module';
     DiaryModule,
     TaskModule,
     Imports,
-    
-   // BrowserAnimationsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
+    FlatpickrModule.forRoot()
   ],
   declarations: [DashboardComponent,UserComponent],
   exports:[UserComponent]

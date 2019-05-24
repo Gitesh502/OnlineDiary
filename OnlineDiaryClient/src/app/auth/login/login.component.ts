@@ -38,13 +38,13 @@ export class LoginComponent implements OnInit {
             user:data.response,
             token:data.response.token
           }
+          this.storage.removeAll();
           this.storage.set('user',result);
         }
         this.alertService.show(data.valid,data.msg)
         this.submitted = false;
         this.router.navigate(['/user/dashboard']);
       },err=>{
-        console.log(err);
         this.alertService.show(false,err.error.msg)
         this.submitted = false;
       });

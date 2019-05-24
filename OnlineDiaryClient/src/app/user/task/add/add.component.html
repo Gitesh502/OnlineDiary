@@ -20,7 +20,7 @@
                         <!-- <input fullwidth id="taskTags" [(ngModel)]="task.tags" name="taskTags" nbinput placeholder="Tags"
                             class="input-full-width input-md input-rectangle"> -->
                         <ng-select [items]="tags" [addTag]="addTag" [hideSelected]="true" multiple="true" bindLabel="name"
-                            [(ngModel)]="task.tags" class="input-full-width input-md input-rectangle">
+                            [(ngModel)]="task.tags" class="input-full-width input-md input-rectangle" name="tags">
                         </ng-select>
                     </div>
                 </div>
@@ -51,11 +51,11 @@
     </nb-card-body>
     <nb-card-footer>
         <div class="c-diary-actions">
-            <button *ngIf="id <= 0" nbButton status="success" (click)="addDiary();submitted=true" [disabled]="submitted || !form.valid"
+            <button *ngIf="id == '' || id == null"  nbButton status="success" (click)="addTask();submitted=true" [disabled]="submitted || !form.valid"
                 [class.btn-pulse]="submitted">
                 Save Task
             </button>
-            <button *ngIf="id>0" nbButton status="success" (click)="updateDiary();submitted=true" [disabled]="submitted || !form.valid"
+            <button *ngIf="id!=null && id!=''" nbButton status="success" (click)="updateTask();submitted=true" [disabled]="submitted || !form.valid"
                 [class.btn-pulse]="submitted">
                 Update Task
             </button>

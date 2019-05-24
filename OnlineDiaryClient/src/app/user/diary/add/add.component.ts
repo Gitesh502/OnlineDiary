@@ -43,7 +43,7 @@ export class AddComponent implements OnInit {
     });
   }
 
-  initvalues(){
+  initvalues() {
     this.diary.createdOn = new Date();
   }
 
@@ -111,7 +111,12 @@ export class AddComponent implements OnInit {
     this.initvalues();
   }
 
-  reset(){
-    this.resetForm();
+  reset() {
+    if (this.id > 0 && !Number.isNaN(this.id)) {
+      this.router.navigateByUrl("user/diary/view")
+    }
+    else {
+      this.resetForm();
+    }
   }
 }

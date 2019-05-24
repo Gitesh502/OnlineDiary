@@ -12,6 +12,8 @@ namespace OD.BLL
 
         private IUserRepository _userRepository;
         private IDiaryRepository _diaryRepository;
+        private ITaskRepository _taskRepository;
+        private ILogRepository _logRepository;
 
         public IUserRepository Users
         {
@@ -29,6 +31,25 @@ namespace OD.BLL
                 if (this._diaryRepository == null)
                     this._diaryRepository = new DiaryRepository();
                 return _diaryRepository;
+            }
+        }
+        public ITaskRepository Task
+        {
+            get
+            {
+                if (this._taskRepository == null)
+                    this._taskRepository = new TaskRepository();
+                return _taskRepository;
+            }
+        }
+
+        public ILogRepository Log
+        {
+            get
+            {
+                if (this._logRepository == null)
+                    this._logRepository = new LogRepository();
+                return _logRepository;
             }
         }
 

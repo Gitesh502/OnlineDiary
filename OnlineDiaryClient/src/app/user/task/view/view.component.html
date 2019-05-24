@@ -1,56 +1,19 @@
-<nb-card>
+<nb-card [nbSpinner]="msgService.loading" nbSpinnerStatus="success">
   <nb-card-body>
     <div class="c-row">
       <div class="c-notes">
         <ul>
-          <li>
-            <a href="#">
-              <h2>Title #1</h2>
-              <p>Text Content #1</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
+          <ng-container *ngFor="let task of taskList">
+            <li>
+              <a>
+                <h2>{{task.title}}</h2>
+                <p [innerHTML]="task.description"></p>
+                <div class="tool-bar" >
+                    <button (click)="editTask(task)">Edit</button>
+                  </div>
+              </a>
+            </li>
+          </ng-container>
         </ul>
       </div>
     </div>

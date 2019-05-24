@@ -3,4 +3,5 @@ export class users{
     email:string=null;
     password:string=null;
     confirmPassword:string=null;
+    rememberMe?:boolean=false;
 }

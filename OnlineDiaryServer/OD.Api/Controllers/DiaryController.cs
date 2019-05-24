@@ -1,45 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using OD.Api.ApiModels.Request;
 using OD.Api.ApiModels.Response;
 using OD.Api.Helpers;
 using OD.BLL.Services;
 using OD.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace OD.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class DiaryController : ControllerBase
+    public class DiaryController : BaseController
     {
         private readonly IMapper _mapper;
         private readonly IDiaryService _diaryService;
-        private readonly IOptions<AppSettings> config;
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly string UserId;
 
         public DiaryController(
           IMapper mapper
           , IDiaryService diaryService
-          , IUserService userService
-          , IOptions<AppSettings> config
-          , IHttpContextAccessor httpContextAccessor)
+          , IUserService userService)
         {
-
             _mapper = mapper;
             _diaryService = diaryService;
-            this.config = config;
-            _httpContextAccessor = httpContextAccessor;
-            this.UserId = _httpContextAccessor.HttpContext.Request.Headers["UserId"].FirstOrDefault();
-
         }
 
         [Route("Save"),HttpPost]
@@ -86,12 +75,14 @@ namespace OD.Api.Controllers
                 return Ok(new { status = HttpStatusCode.InternalServerError, valid = true, msg = ex.InnerException.Message });
             }
         }
-
+        //[Authorize]
         [Route("GetByUserId"),HttpGet]
         public async Task<IActionResult> GetByUserId()
         {
             try
             {
+                
+               var x =  this.User.GetUserId();
                 var diaries= await _diaryService.GetByUserId(this.UserId);
                 List<DiaryResponseModel> diariesResponse = _mapper.Map<List<DiaryResponseModel>>(diaries);
                 if(diariesResponse.Count()>0)
